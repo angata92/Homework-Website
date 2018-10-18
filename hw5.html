@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<link href='hw.css' rel='stylesheet' >
+	
+	<div class="top">
+		<div class="bar" id="myNavbar">
+			<a class="bar-item button hover-black hide-medium hide-large right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+			<i class="fa fa-bars"></i>
+			</a>
+			<a href="#home" class="bar-item button">Начало</a>
+			<a href="#about" class="bar-item button hide-small"><i class="fa fa-user"></i> За нас</a>
+			<a href="#portfolio" class="bar-item button hide-small"><i class="fa fa-th"></i> Портфолио</a>
+			<a href="#contact" class="bar-item button hide-small"><i class="fa fa-envelope"></i> Контакти</a>
+			<a href="#" class="bar-item button hide-small right hover-red">
+			<i class="fa fa-search"></i>
+			</a>
+		</div>
+		<div id="navDemo" class="bar-block white hide hide-large hide-medium">
+			<a href="#about" class="bar-item button" onclick="toggleFunction()">За Нас</a>
+			<a href="#portfolio" class="bar-item button" onclick="toggleFunction()">Портфолио</a>
+			<a href="#contact" class="bar-item button" onclick="toggleFunction()">Контакти</a>
+			<a href="#" class="bar-item button">Търси</a>
+		</div>
+		</div>
+		
+		<div class="bgimg-1 display-container opacity-min" id="home">
+		<div class="display-middle" style="white-space:nowrap;">
+			<span class="center padding-large black xlarge wide animate-opacity">MY <span class="w3-hide-small">WEB</span>
+		</div>
+		</div>
+		<div class="content container padding-64" id="about">
+		<h3 class="center">За Нас</h3>
+		<p class="center"><em>Моят пръв уеб сайт</em></p>
+		<div class="row">
+			<div class="col m6 center padding-large">
+			<p><b><i class="fa fa-user w3-margin-right"></i>Име:&nbsp Ангел Диманов</b></p><br>
+			<img src="https://scontent.fsof2-1.fna.fbcdn.net/v/t1.0-9/13754454_1276373485708500_1792527280848479385_n.jpg?_nc_cat=0&oh=1a9954511901f3f54712c8a83d728a2d&oe=5BA7B6FB"
+			class="round image opacity hover-opacity-off" alt="Photo of Me" width="500" height="333">
+			</div>
+		
+			<!-- Hide this text on small devices -->
+			<div class="col m6 hide-small padding-large">
+			<p>Добре дошли в нашия уеб сайт.Ние ще се погрижим за изработката за вашия уеб сайт.</p>
+			</div>
+		</div>
+		<p class="large center padding-16">Ние сме добри в:</p>
+		<p class="wide"><i class="fa fa-laptop"></i>Уеб дизайн:</p>
+		<div class="light-grey">
+			<div class="container padding-small dark-grey center" style="width:90%">90%</div>
+		</div>
+		<p class="wide"><i class="fa fa-camera"></i>Фотография:</p>
+		<div class="light-grey">
+			<div class="container padding-small dark-grey center" style="width:85%">80%</div>
+		</div>
+		<p class="wide"><i class="fa fa-photo"></i>Фотошоп:</p>
+		<div class="light-grey">
+			<div class="container padding-small dark-grey center" style="width:75%">75%</div>
+		</div>
+		</div>
+		
+		<!-- Second Parallax Image with Portfolio Text -->
+		<div class="bgimg-2 display-container opacity-min">
+		<div class="display-middle">
+			<span class="xxlarge text-white wide">Портфолио</span>
+		</div>
+		</div>
+		
+		<!-- Container (Portfolio Section) -->
+		<div class="content container -padding-64" id="portfolio">
+		<h3 class="-center">Моята работа:</h3>
+		<p class="-center"><em>Тук може да намерите някои от моите проекти<br>Кликни за по-голямо изображение.</em></p><br>
+		
+		<!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+		<div class="w3-row-padding w3-center">
+			<div class="w3-col m3">
+			<img src="travel.jpg"style="width:100%" onclick="onClick(this)" class="hover-opacity" alt="The mist over the mountains">
+			</div>
+		
+			<div class="col m3">
+			<img src="/images/p2.jpg" style="width:100%" onclick="onClick(this)" class="hover-opacity" alt="Coffee beans">
+			</div>
+		
+			<div class="w3-col m3">
+			<img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
+			</div>
+		
+		<div class="col m3">
+			<img src="/images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+			</div>
+			<button class="button padding-large light-grey" style="margin-top:64px">Зареди още</button>
+		</div>
+		</div>
+		
+		<!-- Modal for full size images on click-->
+		<div id="modal01" class="modal black" onclick="this.style.display='none'">
+		<span class="-button large black display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+		<div class="-modal-content animate-zoom center transparent padding-64">
+			<img id="img01" class="image">
+			<p id="caption" class="opacity large"></p>
+		</div>
+		</div>
+		
+		<!-- Third Parallax Image with Portfolio Text -->
+		<div class="bgimg-3 display-container opacity-min">
+		<div class="-display-middle">
+			<span class="xxlarge text-white wide">Контакти</span>
+		</div>
+		</div>
+		
+		<!-- Container (Contact Section) -->
+		<div class="content container padding-64" id="contact">
+		<h3 class="center">Тук работя</h3>
+		<p class="center"><em>Чакам отзиви !</em></p>
+		
+		<div class="row padding-32 section">
+			<div class="col m4 container">
+			<!-- Add Google Maps -->
+			<div id="googleMap" class="round-large greyscale" style="width:100%;height:400px;"></div>
+			</div>
+			<div class="col m8 panel">
+			<div class="large margin-bottom">
+				<i class="fa fa-map-marker fa-fw hover-text-black xlarge margin-right"></i> Пловдив, България<br>
+				<i class="fa fa-phone fa-fw hover-text-black xlarge margin-right"></i> Тел.0883475225<br>
+				<i class="fa fa-envelope fa-fw w3-hover-text-black xlarge margin-right"></i>Емейл: ang_el_@abv.bg<br>
+			</div>
+			<form action="/action_page.php" target="_blank">
+				<div class="row-padding" style="margin:0 -16px 8px -16px">
+				<div class="half">
+					<input class="input border" type="text" placeholder="Име" required name="Name">
+				</div>
+				<div class="half">
+					<input class="input border" type="text" placeholder="Емейл" required name="Email">
+				</div>
+				</div>
+				<input class="input border" type="text" placeholder="Съобщение" required name="Message">
+				<button class="button black right section" type="submit">
+				<i class="fa fa-paper-plane"></i> Изпрати съобщение
+				</button>
+			</form>
+			</div>
+		</div>
+		</div>
+		
+		<!-- Footer -->
+		<footer class="center black padding-64 opacity hover-opacity-off">
+		<a href="#home" class="button light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Нагоре</a>
+		<div class="xlarge section">
+			 <a href="https://www.facebook.com/angel.dimanov" ><i class="fa fa-facebook-official hover-opacity"></i></a>
+			 <a href="https://www.instagram.com/angel_dimanov/" ><i class="fa fa-instagram hover-opacity"></i> <a
+			<i class="fa fa-snapchat hover-opacity"></i>
+			<i class="fa fa-pinterest-p hover-opacity"></i>
+			<i class="fa fa-twitter hover-opacity"></i>
+			<i class="fa fa-linkedin hover-opacity"></i>
+		</div>																									
+		</footer>
+ <script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(51.5, -0.2), zoom: 10
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+}
+</script>
+
+<script src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2945.079832619045!2d25.638723615912706!3d42.42603557918245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a86974bc06f3db%3A0x2362d313a9f3e729!2z0LHRg9C7LiDigJ7QptCw0YAg0KHQuNC80LXQvtC9INCS0LXQu9C40LrQuOKAnCAxNjgt0JAsIDYwMDEg0KHRgtCw0YDQsCDQl9Cw0LPQvtGA0LA!5e0!3m2!1sbg!2sbg!4v1485937594215"></script>
+ 
+</html>
